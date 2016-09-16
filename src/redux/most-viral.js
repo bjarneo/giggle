@@ -1,8 +1,8 @@
 import fetch from 'isomorphic-fetch';
 
 const VIRAL_REQUESTED = 'VIRAL_REQUESTED';
-const VIRAL_SUCCESS = 'VIRAL_SUCCESS';
-const VIRAL_FAILURE = 'VIRAL_FAILURE';
+const VIRAL_SUCCEEDED = 'VIRAL_SUCCEEDED';
+const VIRAL_FAILED = 'VIRAL_FAILED';
 
 const defaultState = {
     error: null,
@@ -17,13 +17,13 @@ export default function mostViral(state = defaultState, action) {
             ...state,
             fetching: true,
         };
-    case VIRAL_SUCCESS:
+    case VIRAL_SUCCEEDED:
         return {
             ...state,
             fetching: false,
             items: action.items,
         };
-    case VIRAL_FAILURE:
+    case VIRAL_FAILED:
         return {
             ...state,
             error: action.error,
@@ -49,11 +49,11 @@ export function requestMostViral(page = 0) {
         return fetch(`/api/hot/viral/${page}`)
             .then(response => response.json())
             .then(json => dispatch({
-                type: VIRAL_SUCCESS,
+                type: VIRAL_SUCCEEDED,
                 items: json.data,
             }))
             .catch(error => dispatch({
-                type: VIRAL_FAILURE,
+                type: VIRAL_FAILED,
                 error,
             }));
     };
