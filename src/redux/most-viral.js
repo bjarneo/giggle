@@ -7,6 +7,7 @@ const VIRAL_FAILED = 'VIRAL_FAILED';
 const defaultState = {
     error: null,
     fetching: false,
+    initial: true,
     items: [],
 };
 
@@ -21,6 +22,7 @@ export default function mostViral(state = defaultState, action) {
         return {
             ...state,
             fetching: false,
+            initial: false,
             items: action.items,
         };
     case VIRAL_FAILED:
