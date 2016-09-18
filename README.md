@@ -12,6 +12,11 @@ Add the `client id` and `client secret` to `config/default.json`.
 
 Get up and running
 ------
+Remember to rename `default.json.dist` file to `default.json`
+```bash
+$ mv config/default.json.dist config/default.json
+```
+
 ```bash
 $ npm install
 ```

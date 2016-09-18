@@ -1,5 +1,6 @@
 import router from 'koa-router';
 import fetch from 'isomorphic-fetch';
+import config from 'config';
 import auth from '../auth';
 
 const routes = router();
@@ -8,7 +9,7 @@ routes.get('/hot/viral/:page', function *viral() {
     const page = parseInt(this.params.page, 10);
 
     // should move the endpoint to the config
-    yield fetch(`https://api.imgur.com/3/gallery/hot/viral/${page}`, {
+    yield fetch(`${config.get('imgur.api')}/gallery/hot/viral/${page}`, {
         method: 'GET',
         headers: {
             Accept: 'application/json',

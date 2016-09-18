@@ -1,5 +1,6 @@
 {
     "imgur": {
+        "api": "https://api.imgur.com/3",
         "id": "REPLACE_ME",
         "secret": "REPLACE_ME"
     }
