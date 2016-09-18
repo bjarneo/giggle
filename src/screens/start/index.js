@@ -35,7 +35,7 @@ export default class Start extends Component {
             <div className={ styles.main }>
                 <ImageList items={this.props.items} />
 
-                <LoadMore requestMostViral={this.props.requestMostViral} page={1} />
+                <LoadMore action={this.props.requestMostViral} page={1} />
             </div>
         );
     }
