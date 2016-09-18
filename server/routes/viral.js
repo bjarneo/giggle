@@ -8,7 +8,7 @@ routes.get('/hot/viral/:page', function *viral() {
     const page = parseInt(this.params.page, 10);
 
     // should move the endpoint to the config
-    yield fetch(`https://api.imgur.com/3/gallery/hot/viral/${page}.json`, {
+    yield fetch(`https://api.imgur.com/3/gallery/hot/viral/${page}`, {
         method: 'GET',
         headers: {
             Accept: 'application/json',

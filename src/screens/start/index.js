@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { requestMostViral } from '../../redux/most-viral';
 import ImageList from '../../components/image-list';
+import LoadMore from '../../components/load-more';
 import styles from './style.scss';
 
 function mapStateToProps(state) {
@@ -33,6 +34,8 @@ export default class Start extends Component {
         return (
             <div className={ styles.main }>
                 <ImageList items={this.props.items} />
+
+                <LoadMore requestMostViral={this.props.requestMostViral} page={1} />
             </div>
         );
     }
