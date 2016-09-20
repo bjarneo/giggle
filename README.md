@@ -32,6 +32,14 @@ $ npm run build
 $ npm start
 ```
 
+Docker
+------
+```bash
+$ npm run docker-build
+$ npm run docker-run
+```
+Now run `npm start` from within the docker instance
+
 License
 ------
 MIT-licensed. See LICENSE.
