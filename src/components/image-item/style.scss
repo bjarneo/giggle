@@ -37,13 +37,14 @@
 }
 
 .overlay {
-    padding: 10px;
+    padding: 5px 0;
     font-size: 16px;
     display: block; /* or inline-block */
     text-overflow: ellipsis;
     word-wrap: break-word;
     overflow: hidden;
     max-height: 52px;
+    min-height: 52px;
     line-height: 22px;
 
     a {
@@ -54,4 +55,35 @@
         color: inherit;
         text-decoration: none;
     }
+}
+
+.icons-wrapper {
+    font-size: 12px;
+    margin: 10px 0;
+    color: #ccc;
+
+    div {
+        width: 33%;
+        height: 18px;
+        display: inline-block;
+        line-height: 18px;
+
+        span {
+            position: relative;
+            top: -2px;
+        }
+
+        i {
+            font-size: 14px !important;
+            margin-right: 5px;
+        }
+    }
+}
+
+.up {
+    color: #39c442;
+}
+
+.down {
+    color: #cc575d;
 }
