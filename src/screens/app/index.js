@@ -23,6 +23,9 @@ export default class App extends Component {
                   link={[{
                       rel: 'icon', href: '/favicon.png',
                   }]}
+                  link={[{
+                      rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+                  }]}
                 />
                 <Navbar />
                 { this.props.children }
