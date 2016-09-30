@@ -8,7 +8,7 @@ To test this application you need to create a client at imgur.com.
 
 Add the `client id` and `client secret` to `config/default.json`.
 
-![Screenshot](http://i.imgur.com/TgVnkxp.jpg)
+![Screenshot](https://i.imgur.com/sEnRDDk.png)
 
 Get up and running
 ------
