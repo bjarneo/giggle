@@ -19,11 +19,13 @@ export default function mostViral(state = defaultState, action) {
             fetching: true,
         };
     case VIRAL_SUCCEEDED:
+        const items = [...state.items, ...action.items];
+
         return {
             ...state,
             fetching: false,
             initial: false,
-            items: action.items,
+            items,
         };
     case VIRAL_FAILED:
         return {
