@@ -41,7 +41,11 @@ export default class Start extends Component {
             <div className={ styles.main }>
                 <ImageList items={this.props.items} />
                 { isFetching ? <Loader /> : '' }
-                <LoadMore action={this.props.requestMostViral} page={1} />
+                <LoadMore
+                  action={this.props.requestMostViral}
+                  page={1}
+                  isFetching={isFetching}
+                />
             </div>
         );
     }

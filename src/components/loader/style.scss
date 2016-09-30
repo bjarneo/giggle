@@ -1,14 +1,15 @@
 
 .loader {
     color: #eeeeee;
-    font-size: 45px;
+    font-size: 35px;
     text-indent: -9999em;
     overflow: hidden;
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    margin: 72px 100px;
-    position: relative;
+    margin: 20px auto;
+    display: block;
+    clear: both;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
