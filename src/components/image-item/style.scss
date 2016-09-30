@@ -9,6 +9,15 @@
     padding: 35px;
     color: #fff;
 
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+
+    &:hover {
+        -webkit-transition: 0.5s ease;
+        transition: 0.5s ease;
+        border-bottom: 1px solid #39c442;
+    }
+
     img {
         width: 180px;
         height: 180px;
