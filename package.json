@@ -17,14 +17,14 @@
     "isomorphic-fetch": "^2.2.1",
     "koa-router": "^5.4.0",
     "react-lazyload": "^2.1.5",
-    "roc-package-web-app-react": "^1.0.0-alpha"
+    "roc-package-web-app-react": "1.0.0-beta.3"
   },
   "devDependencies": {
     "babel-eslint": "6.0.2",
     "eslint": "2.6.0",
     "eslint-config-airbnb": "6.2.0",
     "eslint-plugin-react": "4.2.3",
-    "roc-package-web-app-react-dev": "^1.0.0-alpha",
-    "roc-plugin-style-sass": "^1.0.0-alpha"
+    "roc-package-web-app-react-dev": "1.0.0-beta.3",
+    "roc-plugin-style-sass": "1.0.0-beta.3"
   }
 }
