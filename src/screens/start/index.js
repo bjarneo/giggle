@@ -3,11 +3,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { requestMostViral } from '../../redux/most-viral';
+import { provideHooks } from 'redial';
+import { VIRAL_SUCCEEDED, fetchMostViral, requestMostViral } from '../../redux/most-viral';
 import ImageList from '../../components/image-list';
 import LoadMore from '../../components/load-more';
 import Loader from '../../components/loader';
 import styles from './style.scss';
+
 
 function mapStateToProps(state) {
     return {
@@ -21,6 +23,17 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ requestMostViral }, dispatch);
 }
 
+@provideHooks({
+    fetch: ({ getState, dispatch }) => {
+        if (getState().mostViral.initial) {
+            return fetchMostViral()
+                .then(data => dispatch({
+                    type: VIRAL_SUCCEEDED,
+                    items: data,
+                }));
+        }
+    },
+})
 @connect(mapStateToProps, mapDispatchToProps)
 export default class Start extends Component {
     static propTypes = {
@@ -28,10 +41,6 @@ export default class Start extends Component {
         requestMostViral: React.PropTypes.func.isRequired,
         initial: React.PropTypes.bool.isRequired,
         fetching: React.PropTypes.bool.isRequired,
-    }
-
-    componentWillMount() {
-        this.props.requestMostViral();
     }
 
     render() {

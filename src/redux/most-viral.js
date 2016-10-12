@@ -1,8 +1,13 @@
 import fetch from 'isomorphic-fetch';
 
-const VIRAL_REQUESTED = 'VIRAL_REQUESTED';
-const VIRAL_SUCCEEDED = 'VIRAL_SUCCEEDED';
-const VIRAL_FAILED = 'VIRAL_FAILED';
+let config;
+if (__NODE__) { // eslint-disable-line no-undef
+    config = require('config');
+}
+
+export const VIRAL_REQUESTED = 'VIRAL_REQUESTED';
+export const VIRAL_SUCCEEDED = 'VIRAL_SUCCEEDED';
+export const VIRAL_FAILED = 'VIRAL_FAILED';
 
 const defaultState = {
     error: null,
@@ -46,15 +51,27 @@ function mostViralRequested() {
     };
 }
 
+export function fetchMostViral(page = 0) {
+    let url = '';
+
+    if (__NODE__) { // eslint-disable-line no-undef
+        url = `${config.host.url}${config.host.port}`;
+    }
+
+    return fetch(`${url}/api/hot/viral/${page}`)
+        .then(response => response.json())
+        .then(json => json.data)
+        .catch(console.error);
+}
+
 export function requestMostViral(page = 0) {
     return (dispatch) => {
         dispatch(mostViralRequested());
 
-        return fetch(`/api/hot/viral/${page}`)
-            .then(response => response.json())
-            .then(json => dispatch({
+        return fetchMostViral(page)
+            .then(data => dispatch({
                 type: VIRAL_SUCCEEDED,
-                items: json.data,
+                items: data,
             }))
             .catch(error => dispatch({
                 type: VIRAL_FAILED,
