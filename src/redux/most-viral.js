@@ -14,6 +14,7 @@ const defaultState = {
     fetching: false,
     initial: true,
     items: [],
+    page: 0,
 };
 
 export default function mostViral(state = defaultState, action) {
@@ -30,6 +31,7 @@ export default function mostViral(state = defaultState, action) {
             ...state,
             fetching: false,
             initial: false,
+            page: ++state.page,
             items,
         };
     case VIRAL_FAILED:

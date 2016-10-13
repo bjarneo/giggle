@@ -19,11 +19,15 @@ routes.get('/hot/viral/:page', function *viral() {
     })
     .then(response => response.json())
     .then(json => {
+        if (json.data.error) {
+            throw new Error(json.data.error);
+        }
+
         const data = json.data.filter(item => !item.nsfw);
 
         this.body = {
             data,
-        }
+        };
     })
     .catch(error => {
         this.body = {

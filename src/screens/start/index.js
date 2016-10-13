@@ -16,6 +16,8 @@ function mapStateToProps(state) {
         items: state.mostViral.items,
         initial: state.mostViral.initial,
         fetching: state.mostViral.fetching,
+        page: state.mostViral.page,
+        error: state.mostViral.error,
     };
 }
 
@@ -41,20 +43,33 @@ export default class Start extends Component {
         requestMostViral: React.PropTypes.func.isRequired,
         initial: React.PropTypes.bool.isRequired,
         fetching: React.PropTypes.bool.isRequired,
+        page: React.PropTypes.number.isRequired,
+    }
+
+    isFetching() {
+        return (!this.props.initial && this.props.fetching);
+    }
+
+    loadMore() {
+        if (this.props.error) {
+            return '';
+        }
+
+        return (
+            <LoadMore
+              action={this.props.requestMostViral}
+              page={this.props.page}
+              isFetching={this.isFetching()}
+            />
+        );
     }
 
     render() {
-        const isFetching = (!this.props.initial && this.props.fetching);
-
         return (
             <div className={ styles.main }>
                 <ImageList items={this.props.items} />
-                { isFetching ? <Loader /> : '' }
-                <LoadMore
-                  action={this.props.requestMostViral}
-                  page={1}
-                  isFetching={isFetching}
-                />
+                { this.isFetching() ? <Loader /> : '' }
+                { this.loadMore() }
             </div>
         );
     }
