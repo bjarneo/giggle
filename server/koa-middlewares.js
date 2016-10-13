@@ -6,6 +6,7 @@ export default function middlewares() {
             yield next;
 
             this.set('Cache-Control', 'max-age=300');
+            this.set('Cache-Control', 'public');
         },
 
         // here we define our custom routes
