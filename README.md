@@ -1,7 +1,7 @@
 Giggle
 ======
 
-This is an example of how to write an basic application based on [ROC](https://github.com/rocjs/roc) and [roc-package-web-app-react](https://github.com/rocjs/roc-package-web-app-react).
+This is an example of how to write an basic application based on [Roc](https://github.com/rocjs/roc) and [roc-package-web-app-react](https://github.com/rocjs/roc-package-web-app-react).
 
 To test this application you need to create a client at imgur.com.
 `https://api.imgur.com/oauth2/addclient`
