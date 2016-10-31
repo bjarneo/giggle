@@ -13,7 +13,7 @@ export default class App extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.loading;
+        return false;
     }
 
     render() {
