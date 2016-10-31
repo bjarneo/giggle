@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router';
 import LazyLoad from 'react-lazyload';
@@ -17,15 +18,15 @@ export default ({ link, title, cover, id, ups, downs, comment_count }) => (
 
         <div className={styles['icons-wrapper']}>
             <div>
-                <i className={"material-icons " + styles.up}>thumb_up</i>
+                <i className={classnames("material-icons", styles.up)}>thumb_up</i>
                 <span>{ups}</span>
             </div>
             <div>
-                <i className={"material-icons " + styles.down}>thumb_down</i>
+                <i className={classnames("material-icons", styles.down)}>thumb_down</i>
                 <span>{downs}</span>
             </div>
             <div>
-                <i className={"material-icons " + styles.comments}>comment</i>
+                <i className={classnames("material-icons ", styles.comments)}>comment</i>
                 <span>{comment_count}</span>
             </div>
         </div>
