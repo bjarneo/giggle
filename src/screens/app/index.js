@@ -12,7 +12,7 @@ export default class App extends Component {
         children: PropTypes.node.isRequired,
     }
 
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate() {
         return false;
     }
 
