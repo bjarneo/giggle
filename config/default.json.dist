@@ -4,8 +4,9 @@
         "id": "REPLACE_ME",
         "secret": "REPLACE_ME"
     },
-    "host": {
-        "port": 3030,
-        "url": "http://localhost:"
+    "DANGEROUSLY_EXPOSE_TO_CLIENT": {
+        "host": {
+            "url": "http://localhost:3030"
+        }
     }
 }

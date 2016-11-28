@@ -1,9 +1,5 @@
 import fetch from 'isomorphic-fetch';
-
-let config;
-if (__NODE__) { // eslint-disable-line no-undef
-    config = require('config');
-}
+import { appConfig } from 'roc-package-web-app-react/app/shared/universal-config';
 
 export const VIRAL_REQUESTED = 'VIRAL_REQUESTED';
 export const VIRAL_SUCCEEDED = 'VIRAL_SUCCEEDED';
@@ -54,13 +50,7 @@ function mostViralRequested() {
 }
 
 export function fetchMostViral(page = 0) {
-    let url = '';
-
-    if (__NODE__) { // eslint-disable-line no-undef
-        url = `${config.host.url}${config.host.port}`;
-    }
-
-    return fetch(`${url}/api/hot/viral/${page}`)
+    return fetch(`${appConfig.host.url}/api/hot/viral/${page}`)
         .then(response => response.json())
         .then(json => json.data)
         .catch(console.error);

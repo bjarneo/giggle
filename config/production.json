@@ -1,5 +1,7 @@
 {
-    "host": {
-        "port": 3000
+    "DANGEROUSLY_EXPOSE_TO_CLIENT": {
+        "host": {
+            "url": "https://giggle.now.sh"
+        }
     }
 }
