@@ -1,13 +1,13 @@
-FROM node:6
+FROM node:8.3.0-alpine
 MAINTAINER Bjarne Oeverli
 
-RUN mkdir -p /app
 WORKDIR /app
 
-COPY package.json /app/package.json
-RUN npm install
+COPY package.json .
 
-ADD . /app
+RUN npm i
+
+ADD . .
 
 RUN npm run build -- --build-disableProgressbar="true"
 

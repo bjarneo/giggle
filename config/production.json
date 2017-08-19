@@ -1,7 +1,7 @@
-{
+module.exports = {
     "DANGEROUSLY_EXPOSE_TO_CLIENT": {
-        "host": {
-            "url": "https://giggle.now.sh"
+        host: {
+            url: "https://giggle.now.sh"
         }
     }
-}
+};
