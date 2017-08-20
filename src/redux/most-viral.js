@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch';
-import { appConfig } from 'roc-package-web-app-react/app/shared/universal-config';
+
+import host from '../utils/host';
 
 export const VIRAL_REQUESTED = 'VIRAL_REQUESTED';
 export const VIRAL_SUCCEEDED = 'VIRAL_SUCCEEDED';
@@ -50,7 +51,7 @@ function mostViralRequested() {
 }
 
 export function fetchMostViral(page = 0) {
-    return fetch(`${appConfig.host.url}/api/hot/viral/${page}`)
+    return fetch(`${host()}/api/hot/viral/${page}`)
         .then(response => response.json())
         .then(json => json.data)
         .catch(console.error);
