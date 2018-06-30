@@ -11,7 +11,9 @@
     "lint": "eslint .",
     "test": "npm run lint",
     "docker-build": "docker build -t giggle .",
-    "docker-run": "docker run -it --rm -p 3000:3000 -h giggle --name=giggle -v $(pwd):/app giggle /bin/bash"
+    "docker-run": "docker run -it --rm -p 3000:3000 -h giggle --name=giggle -v $(pwd):/app giggle /bin/bash",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -19,7 +21,8 @@
     "koa-router": "^5.4.0",
     "react-lazyload": "^2.1.5",
     "roc-package-web-app-react": "1.0.0-beta.16",
-    "roc": "1.0.0-rc.23"
+    "roc": "1.0.0-rc.23",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-eslint": "6.0.2",
@@ -28,5 +31,6 @@
     "eslint-plugin-react": "4.2.3",
     "roc-package-web-app-react-dev": "1.0.0-beta.16",
     "roc-plugin-style-sass": "1.0.0-beta.6"
-  }
+  },
+  "snyk": true
 }
