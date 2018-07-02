@@ -1,0 +1,26 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:tunnel-agent:20170305':
+    - roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-plugin-react > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc-package-webpack > roc-abstract-package-base > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc-plugin-start > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc-plugin-start > roc-abstract-package-base-dev > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-web > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-web > roc-package-webpack > roc-abstract-package-base > roc > download-git-repo > download > caw > tunnel-agent:
+        patched: '2018-06-30T04:38:55.393Z'
