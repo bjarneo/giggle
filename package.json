@@ -22,7 +22,7 @@
     "react-lazyload": "^2.1.5",
     "roc-package-web-app-react": "1.0.0-beta.16",
     "roc": "1.0.0-rc.23",
-    "snyk": "^1.88.0"
+    "snyk": "^1.105.0"
   },
   "devDependencies": {
     "babel-eslint": "6.0.2",
