@@ -24,3 +24,24 @@ patch:
         patched: '2018-06-30T04:38:55.393Z'
     - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-web > roc-package-webpack > roc-abstract-package-base > roc > download-git-repo > download > caw > tunnel-agent:
         patched: '2018-06-30T04:38:55.393Z'
+  'npm:minimatch:20160620':
+    - roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-plugin-react > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-web > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc-plugin-start > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc-package-webpack > roc-abstract-package-base > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-web > roc-package-webpack > roc-abstract-package-base > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc-package-web-app > roc-package-webpack-node > roc-plugin-start > roc-abstract-package-base-dev > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
+    - roc-package-web-app-react > roc > metalsmith > recursive-readdir > minimatch:
+        patched: '2018-10-27T04:38:20.742Z'
