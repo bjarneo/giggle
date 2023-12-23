@@ -18,7 +18,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "isomorphic-fetch": "^2.2.1",
-    "koa-router": "^5.4.0",
+    "koa-router": "^11.0.2",
     "react-lazyload": "^2.1.5",
     "roc-package-web-app-react": "1.0.0-beta.16",
     "roc": "1.0.0-rc.23",
